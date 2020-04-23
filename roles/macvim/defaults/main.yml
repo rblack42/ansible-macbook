@@ -1,0 +1,11 @@
+---
+vundle:
+  - 'editorconfig/editorconfig-vim'
+  - 'micha/vim-colors-solarized'
+set:
+  - tabstop=4
+  - shiftwidth=4
+  - spell
+  - spelllang=en
+  - number
+

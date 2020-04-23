@@ -1,0 +1,6 @@
+---
+- name: Install Keeper Password Manager
+  homebrew_cask:
+    name: keeper-password-manager
+    state: present
+

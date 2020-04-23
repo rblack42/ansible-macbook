@@ -1,0 +1,24 @@
+set nocompatible
+filetype off
+
+"Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+{% for item in {{ vundle }} %}
+Bundle "{{ item }}"
+{% endfor %}
+
+call vundle#end()
+filetype plugin indent on
+syntax enable
+
+" color scheme
+set background=light
+colorscheme solarized
+
+" use "q" to reformat paragraphs
+map q gq}

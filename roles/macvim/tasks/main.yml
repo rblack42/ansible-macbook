@@ -1,0 +1,37 @@
+---
+- name: Install MacVim
+  homebrew_cask:
+    name: macvim
+    state: present
+
+- name: Install editorconfig
+  homebrew:
+    name: editorconfig
+    state: present
+
+- name: Create Vundle directory
+  file:
+    path: ~/.vim/bundle"
+    state: directory
+
+- name: Install Vundle
+  git:
+    repo: https://github.com/VundleVim/Vundle.Vim.git
+    dest: ~/.vim/bundle/Vundle.vim
+
+- name: Clone Solarized repo
+  git:
+    repo:  https://github.com/altercation/vim-colors-solarized.git
+    dest: ~/_github/vim-colors-solarized
+
+- name: Copy solarized colors file
+  copy:
+    src: ~/_github/vim-colors-solarized/colors/solarized.vim
+    dest: ~/.vim/colors/solarized.vim
+
+- name: Create .vimrc
+  template:
+    src: vimrc.j2
+    dest: "~/.vimrc"
+    mode: "0644"
+  notify: Install macvim plugins

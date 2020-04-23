@@ -1,0 +1,6 @@
+---
+- name: Install Etcher
+  homebrew_cask:
+    name: balenaetcher
+    state: present
+

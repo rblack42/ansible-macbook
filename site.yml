@@ -1,0 +1,9 @@
+---
+- hosts: local
+  connection: local
+  roles:
+    - chrome
+    - macvim
+    - etcher
+    - dropbox
+    - macdock

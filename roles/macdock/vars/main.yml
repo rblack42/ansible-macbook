@@ -1,0 +1,34 @@
+dockitems_disabled:
+  - Launchpad
+  - Mail
+  - Safari
+  - Contacts
+  - Notes
+  - Music
+  - Podcasts
+  - TV
+  - News
+  - Reminders
+  - Maps
+  - Photos
+  - Messages
+  - FaceTime
+  - iTunes
+  - iBooks
+  - App Store
+  - Calendar
+  - Terminal
+
+dockitems_enabled:
+  - name: Google Chrome
+    path: "/Applications/Google Chrome.app"
+    pos: 1
+
+  - name: MacVim
+    path: "/Applications/MacVim.app"
+    pos: 2
+
+  - name: Keeper Password Manager
+    path: "/Applications/Keeper Password Manager.app"
+    pos: 3
+
