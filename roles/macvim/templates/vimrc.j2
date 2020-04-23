@@ -8,7 +8,7 @@ call vundle#begin()
 " Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
-{% for item in {{ vundle }} %}
+{% for item in vundle %}
 Bundle "{{ item }}"
 {% endfor %}
 
